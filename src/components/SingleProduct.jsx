@@ -3,9 +3,9 @@ import {useContext} from 'react'
 import {CartContext} from '../Context'
 
 const SingleProduct = ({prod}) => {
-  const {cart,setCart} = useContext(CartContext);
-  return (
-    <div className='products border-1 p-2'>
+const {cart,setCart} = useContext(CartContext);
+return (
+<div className='products border-1 p-2'>
 <img src={prod.image} alt={prod.name} width={200} height={200} />
 <div className="prodDesc">
   <span style={{fontWeight:700}}>{prod.name}</span>
