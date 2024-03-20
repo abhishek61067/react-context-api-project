@@ -2,13 +2,12 @@ import React, { useContext, useState } from "react";
 import Header from "./Header";
 import { faker } from "@faker-js/faker";
 import SingleProduct from "./SingleProduct";
-import {useEffect} from 'react'
-import {CartContext} from '../Context'
+import { useEffect } from "react";
+import { CartContext } from "../Context";
 
 const Home = () => {
-
-  faker.seed(5); 
-  let productsArray = []
+  faker.seed(5);
+  let productsArray = [];
   productsArray = [...new Array(5)].map((el) => {
     return {
       id: faker.datatype.uuid(),
@@ -28,7 +27,7 @@ const Home = () => {
             <div className="">
               {/* {(cart?.includes(product))?'':<SingleProduct prod={product} cart={cart} setCart={setCart}/>
 } */}
-            <SingleProduct prod={product}/>
+              <SingleProduct prod={product} />
 
               {/* passing prod,cart,and setCart as a props to SingleProduct component */}
             </div>
